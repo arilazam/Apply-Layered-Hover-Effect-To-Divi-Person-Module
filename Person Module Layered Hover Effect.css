@@ -1,0 +1,103 @@
+/* Person Module Layered Hover Effect */
+.et_pb_team_member.layered-effect {
+  overflow: hidden;
+  position: relative;
+  text-align: right;
+  width: 320px;
+}
+.et_pb_team_member.layered-effect .et_pb_team_member_image {
+  margin: 0;
+}
+.layered-effect *,
+.layered-effect *:before,
+.layered-effect *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.45s ease;
+  transition: all 0.45s ease;
+}
+.et_pb_team_member.layered-effect img {
+  backface-visibility: hidden;
+}
+.layered-effect:before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: '';
+  background-color: #ffcc00;
+  opacity: 0.7;
+  z-index: 9;
+  -webkit-transition: all 0.45s ease;
+  transition: all 0.45s ease;
+}
+.layered-effect:before {
+  -webkit-transform: skew(30deg) translateX(80%);
+  transform: skew(30deg) translateX(80%);
+}
+.layered-effect .et_pb_team_member_description {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 10;
+  padding: 20px 20px 20px 40%;
+}
+.layered-effect .et_pb_team_member_description:before,
+.layered-effect .et_pb_team_member_description:after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #ffcc00;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+  content: '';
+  opacity: 0.5;
+  z-index: 8;
+}
+.layered-effect .et_pb_team_member_description:before {
+  -webkit-transform: skew(30deg) translateX(100%);
+  transform: skew(30deg) translateX(100%);
+}
+.layered-effect .et_pb_team_member_description:after {
+  -webkit-transform: skew(-30deg) translateX(90%);
+  transform: skew(-30deg) translateX(90%);
+}
+.layered-effect p.et_pb_member_position {
+  font-weight: bold;
+}
+.layered-effect h4,
+.layered-effect p,
+.layered-effect ul {
+  position: relative;
+  margin: 0;
+  opacity: 0;
+  z-index: 11;
+}
+.layered-effect:hover h4,
+.layered-effect:hover p,
+.layered-effect:hover ul {
+  opacity: 1;
+}
+.layered-effect:hover:before {
+  -webkit-transform: skew(30deg) translateX(30%);
+  transform: skew(30deg) translateX(30%);
+  -webkit-transition-delay: 0.05s;
+  transition-delay: 0.05s;
+}
+.layered-effect:hover .et_pb_team_member_description:before {
+  -webkit-transform: skew(30deg) translateX(50%);
+  transform: skew(30deg) translateX(50%);
+  -webkit-transition-delay: 0.15s;
+  transition-delay: 0.15s;
+}
+.layered-effect:hover .et_pb_team_member_description:after {
+  -webkit-transform: skew(-30deg) translateX(40%);
+  transform: skew(-30deg) translateX(40%);
+  -webkit-transition-delay: 0.1s;
+  transition-delay: 0.1s;
+}
+/* End Person Module Layered Hover Effect */
